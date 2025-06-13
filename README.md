@@ -5,7 +5,8 @@ This repository is all about how I do things. Anything that I want to remember a
 ## Windows Fresh Install
 
 ```
-# This is not really a script but a collection of snippets. Many of these actions require reboot or are otherwise interactive. Follow thew instructions on screen as it is the way of the Windows.
+# This is not really a script but a collection of snippets. Many of these actions require reboot or are otherwise interactive.
+# Follow the instructions on screen as it is the way of Windows.
 
 # Install WSL2
 # Manully install the latest release: https://github.com/microsoft/WSL/releases
