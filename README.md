@@ -5,7 +5,17 @@ This repository is all about how I do things. Anything that I want to remember a
 ## Windows Fresh Install
 
 ```
+# Install PowerShell
 winget install --id Microsoft.PowerShell --source winget
+
+# Install Docker CE (Windows)
+$DockerUrl = "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1"
+$DockerTempFile = New-TemporaryFile
+Invoke-WebRequest $DockerUrl -OutFile "$($DockerTempFile).ps1" -UseBasicParsing
+Invoke-Expression -Command "$($DockerTempFile).ps1"
+Remove-Item "$($DockerTempFile).ps1"
+Remove-Item $DockerTempFile
+
 ```
 
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
