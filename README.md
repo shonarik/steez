@@ -13,6 +13,9 @@ wsl --install ubuntu
 # Install PowerShell
 winget install --id Microsoft.PowerShell --source winget
 
+# Enable Windows Sandbox
+Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
+
 # Install Docker CE (Windows)
 $DockerUrl = "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1"
 $DockerTempFile = New-TemporaryFile
@@ -31,6 +34,7 @@ Remove-Item $DockerTempFile
 * [WSL2 - Releases](https://github.com/microsoft/WSL/releases)
 * [Install PowerShell using WinGet (recommended)](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5#install-powershell-using-winget-recommended)
 * [GitHub - Windows Containers - Install Docker CE](https://github.com/microsoft/Windows-Containers/blob/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1)
+* [Install Windows Sandbox]([https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install))
 
 ## Docker Without Docker Desktop
 
