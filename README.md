@@ -4,6 +4,10 @@ This repository is all about how I do things. Anything that I want to remember a
 
 ## Windows Fresh Install
 
+```
+winget install --id Microsoft.PowerShell --source winget
+```
+
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
 
 ## Docker Without Docker Desktop
