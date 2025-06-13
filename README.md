@@ -5,6 +5,11 @@ This repository is all about how I do things. Anything that I want to remember a
 ## Windows Fresh Install
 
 ```
+# Install WSL2
+# Manully install the latest release: https://github.com/microsoft/WSL/releases
+# Reboot after manual installation and then jump into this script.
+wsl --install ubuntu
+
 # Install PowerShell
 winget install --id Microsoft.PowerShell --source winget
 
@@ -27,6 +32,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ### References
 
+* [WSL2 - Releases](https://github.com/microsoft/WSL/releases)
 * [Install PowerShell using WinGet (recommended)](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5#install-powershell-using-winget-recommended)
 * [GitHub - Windows Containers - Install Docker CE](https://github.com/microsoft/Windows-Containers/blob/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1)
 
