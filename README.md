@@ -16,6 +16,10 @@ Invoke-Expression -Command "$($DockerTempFile).ps1"
 Remove-Item "$($DockerTempFile).ps1"
 Remove-Item $DockerTempFile
 
+# Install WSL2
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
 ```
 
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
