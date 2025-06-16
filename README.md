@@ -20,6 +20,12 @@ winget install --id Microsoft.PowerShell --source winget
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
 
+# This WSB Config works with NVIDIA GPU (disables it in the sandbox), otherwise it crashes on start
+@"<Configuration>
+  <VGpu>Disable</VGpu>
+  <Networking>Enable</Networking>
+</Configuration>"@ | Set-Content -Path <Path to personal utilities>
+
 # Install Docker CE (Windows)
 $DockerUrl = "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1"
 $DockerTempFile = New-TemporaryFile
