@@ -38,8 +38,6 @@ Remove-Item $DockerTempFile
 winget install --id Git.Git -e --source winget
 winget install --id GitHub.GitHubDesktop -e --source winget
 
-# Manually login using GHD
-
 ```
 
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
@@ -49,6 +47,7 @@ winget install --id GitHub.GitHubDesktop -e --source winget
 
 ```
 # Use Git for Windows Credentials Helper
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 
 ```
 
