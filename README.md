@@ -49,6 +49,14 @@ winget install --id GitHub.GitHubDesktop -e --source winget
 # Use Git for Windows Credentials Helper
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 
+# Install Windows Hello Sudo
+mkdir ~/wsl-hello-sudo
+cd wsl-hello-sudo
+wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
+tar xvf release.tar.gz
+cd release
+./install.sh
+
 ```
 
 ### References
