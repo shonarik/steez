@@ -34,10 +34,23 @@ Invoke-Expression -Command "$($DockerTempFile).ps1"
 Remove-Item "$($DockerTempFile).ps1"
 Remove-Item $DockerTempFile
 
+# Install Git
+winget install --id Git.Git -e --source winget
+winget install --id GitHub.GitHubDesktop -e --source winget
+
+# Manually login using GHD
+
 ```
 
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
 * **Install Docker CE** via script from Microsoft at https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1. It appears that Docker does not publish this on their website, but Microsoft still does.
+
+## Ubuntu Fresh Install
+
+```
+# Use Git for Windows Credentials Helper
+
+```
 
 ### References
 
@@ -45,6 +58,8 @@ Remove-Item $DockerTempFile
 * [Install PowerShell using WinGet (recommended)](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5#install-powershell-using-winget-recommended)
 * [GitHub - Windows Containers - Install Docker CE](https://github.com/microsoft/Windows-Containers/blob/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1)
 * [Install Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-install)
+* [Git - Downloads](https://git-scm.com/downloads/win)
+* [Get started using Git on WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 
 ## Docker Without Docker Desktop
 
