@@ -38,6 +38,9 @@ Remove-Item $DockerTempFile
 winget install --id Git.Git -e --source winget
 winget install --id GitHub.GitHubDesktop -e --source winget
 
+# Install pgAdmin
+winget install --id PostgreSQL.pgAdmin --source winget
+
 ```
 
 * **Install Powershell** via `winget` because that is the recommended way: `winget install --id Microsoft.PowerShell --source winget`
