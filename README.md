@@ -41,6 +41,9 @@ winget install --id GitHub.GitHubDesktop -e --source winget
 # Install pgAdmin
 winget install --id PostgreSQL.pgAdmin --source winget
 
+# Install VSCode
+winget install --id Microsoft.VisualStudioCode --source winget
+
 # Prep for NVIDIA GPU in Docker
 # Guid here: https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 # 1. Install latest GPU driver from here: https://www.nvidia.com/en-us/drivers/
