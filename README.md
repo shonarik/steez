@@ -44,6 +44,9 @@ winget install --id PostgreSQL.pgAdmin --source winget
 # Install VSCode
 winget install --id Microsoft.VisualStudioCode --source winget
 
+# Install AWS CLI
+winget install --id Amazon.AWSCLI --source winget
+
 # Prep for NVIDIA GPU in Docker
 # Guid here: https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 # 1. Install latest GPU driver from here: https://www.nvidia.com/en-us/drivers/
