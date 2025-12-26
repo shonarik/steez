@@ -103,6 +103,60 @@ sudo apt-get install -y dotnet-sdk-9.0
 * [Get started using Git on WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 * [Install .NET SDK or .NET Runtime on Ubuntu](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2404)
 
+## Arch Linux
+
+### Install Arch Linux
+
+**Installation**
+
+From `pwsh` do the following:
+
+```
+wsl --update
+wsl --install archlinux
+```
+
+**OOTBE**
+
+Arch starts as `root` without password. The nature of `wsl` is that you do not need the password for the default user. However, if you do want a `sudo` based experience then you will need a password. Additionally, I recomment that you create another user other than `root`. In other words, you should set a `root` password (you will likely never need this, but worhtwhile to avoid having to change your default `wsl` user to `root` in the future - i.e. you can `su` to `root` as needed), install `sudo`, create another user, add this user to `sudoers` and then set your new user as default.
+
+```
+# Set `root` password:
+passwd
+
+# Create a new user named `<user>` - of course you should replace `<user>` with the actual user name
+useradd -m <user>
+passwd <user>
+
+# Update `pacman`
+pacman -Syu
+
+# Install `vi`
+pacman -S vi
+
+# Install `sudo`
+pacman -S sudo
+
+# Add `<user>` to `sudoers`
+visudo # Within `visudo` add the following: `<user>   ALL=(ALL:ALL) ALL`
+```
+
+From `pwsh` set your new user as default:
+
+```
+wsl --manage archlinux --set-default-user <user>
+```
+
+From here, exit and restart `archlinux`. You should start in a prompt for `<user>`.
+
+Next, we'll enable Windows Hello for `sudo` - in other words, you will use Windows Hello in place of your password for `<user>`.
+
+**References***
+
+* [Install Arch Linux on WSL](https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL)
+* [Users and groups](https://wiki.archlinux.org/title/Users_and_groups#Example_adding_a_user)
+* [Sudo](https://wiki.archlinux.org/title/Sudo)
+
 ## Docker Without Docker Desktop
 
 I prefer the command line so Docker Desktop does not offer much advantage. Additionally, it's not clear the switching between Linux and Windows is all that useful - I mean if I want to use a Linux container I just open WSL2. Windows?- well, that's the default.
