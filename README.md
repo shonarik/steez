@@ -160,6 +160,21 @@ wget https://github.com/lzlrd/wsl-hello-sudo/releases/download/v3.0.0/release.ta
 tar xvf release.tar.gz
 ```
 
+Graphics Acceleration
+
+```
+sudo pacman -S mesa
+sudo pacman -S mesa-utils
+sudo pacman -S vulkan-dzn
+sudo pacman -S vulkan-icd-loader
+```
+
+**.bashrc**
+```
+export GALLIUM_DRIVER=d3d12
+export LIBVA_DRIVER_NAME=d3d12
+```
+
 ### References
 
 * [Install Arch Linux on WSL](https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL)
