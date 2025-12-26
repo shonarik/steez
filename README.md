@@ -158,6 +158,16 @@ mkdir ~/wsl-hello-sudo
 cd wsl-hello-sudo
 wget https://github.com/lzlrd/wsl-hello-sudo/releases/download/v3.0.0/release.tar.gz
 tar xvf release.tar.gz
+cd release
+./install.sh # Follow instructions
+# Configure PAM when done
+# Add `auth sufficient pam_wsl_hello.so` to `/etc/pam.d/sudo`
+# Example
+##%PAM-1.0
+#auth            sufficient      pam_wsl_hello.so
+#auth            include         system-auth
+#account         include         system-auth
+#session         include         system-auth
 ```
 
 Graphics Acceleration
@@ -173,6 +183,20 @@ sudo pacman -S vulkan-icd-loader
 ```
 export GALLIUM_DRIVER=d3d12
 export LIBVA_DRIVER_NAME=d3d12
+```
+
+Other apps:
+
+```
+# Install nvim
+sudo pacman -S nvim
+
+# Install git
+sudo pacman -S git
+
+# Use Git for Windows Credentials Helper
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+
 ```
 
 ### References
