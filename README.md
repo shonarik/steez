@@ -212,6 +212,9 @@ sudo pacman -S nodejs
 # Install opencode-ai
 curl -fsSL https://opencode.ai/install | bash
 
+# Install dotnet
+sudo pacman -S dotnet-runtime dotnet-sdk aspnet-runtime
+
 ```
 
 ### References
