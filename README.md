@@ -197,6 +197,15 @@ sudo pacman -S git
 # Use Git for Windows Credentials Helper
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 
+# Install Docker
+sudo pacman -S docker
+
+# Install Web Browser Integration
+sudo pacman -S xdg-utils
+
+# Install Azure CLI
+sudo pacman -S azure-cli
+
 ```
 
 ### References
@@ -204,6 +213,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 * [Install Arch Linux on WSL](https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL)
 * [Users and groups](https://wiki.archlinux.org/title/Users_and_groups#Example_adding_a_user)
 * [Sudo](https://wiki.archlinux.org/title/Sudo)
+* [Docker](https://wiki.archlinux.org/title/Docker)
 
 ## Docker Without Docker Desktop
 
