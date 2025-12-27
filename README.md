@@ -210,7 +210,7 @@ sudo pacman -S azure-cli
 sudo pacman -S nodejs
 
 # Install opencode-ai
-npm i -g opencode-ai
+curl -fsSL https://opencode.ai/install | bash
 
 ```
 
