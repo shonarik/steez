@@ -199,6 +199,9 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 
 # Install Docker
 sudo pacman -S docker
+sudo systemctl disable systemd-networkd-wait-online.service
+sudo systemctl enable docker.socket
+# reboot
 
 # Install Web Browser Integration
 sudo pacman -S xdg-utils
