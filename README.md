@@ -206,6 +206,12 @@ sudo pacman -S xdg-utils
 # Install Azure CLI
 sudo pacman -S azure-cli
 
+# Install nodejs
+sudo pacman -S nodejs
+
+# Install opencode-ai
+npm i -g opencode-ai
+
 ```
 
 ### References
